@@ -73,7 +73,7 @@ ngrok http 8080
 
 
 #### 11. 날씨
-<img src="img/날.png" width="60%" />
+<img src="img/날씨.png" width="60%" />
 
 <br/>
 
