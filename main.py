@@ -20,7 +20,7 @@ sc = SlackClient(secretKey.slack_token)
 ERR_TEXT = "명령어가 잘못됐거나 없는 유저입니다. 도움말은 *help* 를 입력해 주세요."
 
 # define header for urllib request
-user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) '
              'Chrome/58.0.3029.110 Safari/537.36'
 hds = {'User-Agent': user_agent}
 hds_json = {'User-Agent': user_agent, 'Content-Type': 'Application/json'}
@@ -55,7 +55,7 @@ def _event_handler(event_type, slack_event):
                 keywords = def_crawling.weather.search_weather(text[2])
 
             elif text[1] == 'restaurant' and text[2]:
-                keywords = def_crawling.restaurant.serach_restaurant(text[2])
+                keywords = def_crawling.restaurant.search_restaurant(text[2])
 
             elif text[1] == 'help':
                 keywords = def_crawling.help._help_desk()

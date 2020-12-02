@@ -1,9 +1,13 @@
+import random
 import urllib
 
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 
 # BOJ 문제 크롤링
+from main import hds
+
+
 def _get_boj(tag, level):
     def getRatio(e):
         return float(e[5])

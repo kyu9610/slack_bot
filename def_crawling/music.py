@@ -1,5 +1,6 @@
 
 import urllib
+
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 
@@ -46,6 +47,7 @@ def _crawl_music_chart(text):
             artist = artist[0:count]
             row = "\t" + str(i + 1) + "위:  " + keyword.get_text().replace('\n', '') + "\t" + artist
             keywords.append(row)
+            keywords.append('\n')
 
     # 한글 지원을 위해 앞에 unicode u를 붙혀준다.
     return u'\n'.join(keywords)

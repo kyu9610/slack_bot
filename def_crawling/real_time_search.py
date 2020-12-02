@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
-def _crawl_naver_search():
 
+def _crawl_naver_search():
     json = requests.get('https://www.naver.com/srchrank?frm=main').json()
 
     ranks = json.get("data")
@@ -21,4 +21,3 @@ def _crawl_naver_search():
     keywords.append("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
     # 한글 지원을 위해 앞에 unicode u를 붙혀준다.
     return u'\n'.join(keywords)
-        

@@ -44,9 +44,7 @@ def search_weather(location):
         TodayFeelTemp = soup.find('span', {'class': 'sensible'}).text[5:]
 
         # 자외선 지수
-        TodayUV = soup.find('span', {'class': 'indicator'}).text[4:-2] + " " + soup.find('span',
-                                                                                         {'class': 'indicator'}).text[
-                                                                               -2:]
+        TodayUV = soup.find('span', {'class': 'indicator'}).text[4:-2] + " " + soup.find('span',{'class': 'indicator'}).text[-2:]
 
         # 미세먼지, 초미세먼지, 오존 지수
         CheckDust1 = soup.find('div', {'class': 'sub_info'})
